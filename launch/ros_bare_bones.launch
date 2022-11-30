@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="nodelet_manager" default="ros_bare_bones_manager"/>
+
+    <node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" output="screen"
+          respawn="true"/>
+
+    <node pkg="nodelet" type="nodelet" name="obstacle_detection_nodelet"
+          args="load ros_bare_bones/ROSBareBonesNodelet standalone_nodelet"
+          respawn="true">
+        
+    </node>
+
+</launch>
+
