@@ -1,3 +1,4 @@
 <library path="lib/libros_bare_bones_nodelet">
-    <class name="ros_bare_bones/ROSBareBonesNodelet" type="ros_bare_bones::ROSBareBonesNodelet" base_class_type="nodelet::Nodelet" />
+    <class name="ros_bare_bones/ROSBareBonesNodelet" type="ros_bare_bones::ROSBareBonesNodelet"
+           base_class_type="nodelet::Nodelet"/>
 </library>
