@@ -23,6 +23,7 @@ private:
     private_nh = getPrivateNodeHandle();
 
     pub = nh.advertise<std_msgs::String>("chatter", 1000);
+    message_callback();
   }
 
 private:
