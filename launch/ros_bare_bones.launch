@@ -8,7 +8,7 @@
     <node pkg="nodelet" type="nodelet" name="obstacle_detection_nodelet"
           args="load ros_bare_bones/ROSBareBonesNodelet standalone_nodelet"
           respawn="true">
-        
+
     </node>
 
 </launch>
