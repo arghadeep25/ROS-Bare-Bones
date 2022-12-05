@@ -24,6 +24,13 @@ The idea is to build ROS packages separately. This helps to build any ROS based 
 mkdir ros_package && cd ros_package
 ```
 
+## Execution
+
+```
+roscore
+roslaucnh rosbarebones
+```
+
 ## Further Reading
 
 [ROS Nodelet Tutorial](http://wiki.ros.org/nodelet/Tutorials/Porting%20nodes%20to%20nodelets)
