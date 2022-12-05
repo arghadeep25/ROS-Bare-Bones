@@ -5,7 +5,7 @@
     <node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" output="screen"
           respawn="true"/>
 
-    <node pkg="nodelet" type="nodelet" name="obstacle_detection_nodelet"
+    <node pkg="nodelet" type="nodelet" name="ros_bare_bones"
           args="load ros_bare_bones/ROSBareBonesNodelet standalone_nodelet"
           respawn="true">
 
