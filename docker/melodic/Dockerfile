@@ -1,4 +1,5 @@
-FROM ros:melodic
+FROM ros:melodic-ros-base
+LABEL maintainer "Arghadeep Mazumder <arghadeep25@gmail.com>"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get install -y --no-install-recommends \
@@ -6,18 +7,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /root/catkin_ws/src
-WORKDIR /root/catkin_ws/src
+# Create local catkin workspace
+ENV CATKIN_WS=/root/catkin_ws
+RUN mkdir -p $CATKIN_WS/src
+WORKDIR $CATKIN_WS/src
+
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_init_workspace'
 
 COPY . /root/catkin_ws/src/rosbarebones/
 
-WORKDIR /root/catkin_ws
+WORKDIR $CATKIN_WS
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_make'
 RUN sed -i "6i source \"/root/catkin_ws/devel/setup.bash\"" /ros_entrypoint.sh
+
 RUN echo "source /root/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 WORKDIR /
 ENTRYPOINT ["/ros_entrypoint.sh"]
-#CMD ["bash"]
+
 CMD ["roslaunch", "ros_bare_bones", "ros_bare_bones.launch"]
