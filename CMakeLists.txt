@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.10)
 project(ros_bare_bones)
 
 set(CMAKE_CXX_STANDARD 14)
