@@ -16,7 +16,6 @@ To build your own project, you need to modify few of the files.
  - CMakeLists.txt
 ```
 
-
 ## Build
 
 The idea is to build ROS packages separately. This helps to build any ROS based projects faster. 
@@ -29,6 +28,20 @@ mkdir ros_package && cd ros_package
 ```
 roscore
 roslaucnh rosbarebones
+```
+
+## Docker 
+
+If you want to run the Docker image, try pulling from this [Docker Hub](https://hub.docker.com/r/arghadeep25/rosbarebones/)
+
+```
+docker pull arghadeep25/rosbarebones:0.1
+```
+
+and run the Docker image
+
+```
+docker run --rm arghadeep25/rosbarebones:0.1
 ```
 
 ## Further Reading
