@@ -8,6 +8,8 @@
     <node pkg="nodelet" type="nodelet" name="ros_bare_bones"
           args="load ros_bare_bones/ROSBareBonesNodelet standalone_nodelet"
           respawn="true">
+        <param name="pcd_file" value="$(arg pcd_file_name)"/>
+        <param name="downsample_resolution" value="0.2"/>
 
     </node>
 
