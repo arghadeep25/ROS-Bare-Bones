@@ -5,6 +5,7 @@ The purpose of this repository is to build a framework for any ROS based project
 ## Dependencies
 - ROS
 - C++ 14
+- Docker (Optional)
 
 ##  Quickstart Guide
 To build your own project, you need to modify few of the files.
