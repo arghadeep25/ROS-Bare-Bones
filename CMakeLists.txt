@@ -9,7 +9,6 @@ endif ()
 
 find_package(catkin REQUIRED COMPONENTS
         nodelet
-        eigen_conversions
         pcl_ros
         roscpp)
 
