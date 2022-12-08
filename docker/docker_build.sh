@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --tag rosbarebones -f noetic/Dockerfile ..
+docker build --tag rviz_docker -f melodic/Dockerfile ..
