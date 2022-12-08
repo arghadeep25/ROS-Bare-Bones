@@ -1,9 +1,9 @@
-FROM ros:melodic-ros-base
+FROM ros:melodic
 LABEL maintainer "Arghadeep Mazumder <arghadeep25@gmail.com>"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get install -y --no-install-recommends \
-  wget nano build-essential libomp-dev clang lld \
+  wget nano build-essential libomp-dev clang lld ros-melodic-pcl-ros \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
