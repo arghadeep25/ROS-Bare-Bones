@@ -1,10 +1,13 @@
-# ROS Bare Bones
+# ROS Bare Bones (with PCL)
 
-The purpose of this repository is to build a framework for any ROS based project.
+The purpose of this repository is to build a framework for any PCL-ROS based project.
+
+![Getting Started](output/pcd.gif)
 
 ## Dependencies
 - ROS
 - C++ 14
+- PCL 1.8
 - Docker (Optional)
 
 ##  Quickstart Guide
@@ -42,14 +45,15 @@ roslaucnh rosbarebones ros_bare_bones.launch
 If you want to run the Docker image, try pulling from this [Docker Hub](https://hub.docker.com/r/arghadeep25/rosbarebones/)
 
 ```
-docker pull arghadeep25/rosbarebones:0.1
+docker pull arghadeep25/rviz_docker:0.1
 ```
 
 and run the Docker image
 
 ```
-docker run --rm arghadeep25/rosbarebones:0.1
+docker run --rm arghadeep25/rviz_docker:0.1
 ```
+
 ## FAQ
 ### [ERROR] 'catkin_make' not found
 Follow this tutorial [ROS Answers](https://answers.ros.org/question/206876/how-often-do-i-need-to-source-setupbash/)
