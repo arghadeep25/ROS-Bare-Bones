@@ -8,6 +8,15 @@
     <node pkg="nodelet" type="nodelet" name="ros_bare_bones"
           args="load ros_bare_bones/ROSBareBonesNodelet standalone_nodelet"
           respawn="true">
+
+        <!-- Size of Point Cloud -->
+        <param name="point_cloud_size" value="8000"/>
+        <!-- Centre of Point Cloud -->
+        <param name="centreX" value="0.0"/>
+        <param name="centreY" value="0.0"/>
+        <!-- Frequency of Streaming -->
+        <param name="frequency" value="10"/>
+
     </node>
 
 </launch>
