@@ -20,6 +20,33 @@ To build your own project, you need to modify few of the files.
  - CMakeLists.txt
 ```
 
+In `package.xml`, change the following marked as XXXXXXXXXXX
+
+```
+<name>XXXXXXXXXXX</name>
+    <version>0.0.0</version>
+    <description>XXXXXXXXXXX</description>
+
+    <maintainer email="XXXXXXXXXXX"> XXXXXXXXXXX</maintainer>
+```
+
+In `nodelet_plugins.xml`, change the following marked as XXXXXXXXXXX
+
+```
+<library path="lib/libxxxxxxxxxxxx">
+    <class name="xxxxxxxxxxxx/XXXXXXXXXXX" type="xxxxxxxxxxxx::XXXXXXXXXXX"
+           base_class_type="nodelet::Nodelet"/>
+</library>
+```
+
+In `CMakeLists.txt`, change the following
+
+```
+project(sll_obstacle_detection)
+add_library(xxxxxxxxxxxx apps/detection.cpp)
+target_link_libraries(xxxxxxxxxxxx PUBLIC ${catkin_LIBRARIES} PUBLIC ${PCL_LIBRARIES})
+```
+
 ## Build
 
 The idea is to build ROS packages separately. This helps to build any ROS based projects faster. 
